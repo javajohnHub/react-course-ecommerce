@@ -81,3 +81,8 @@ export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
+
+export const getProducts = async () => {
+  const productsRef = doc(db, "products");
+  return await getDoc(productsRef);
+}
